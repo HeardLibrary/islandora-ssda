@@ -1,0 +1,36 @@
+name = SSDA (Bootstrap) v.2
+description = Bootstrap 3 sub-theme for the SSDA site (v.2).
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[pre_navigation]  = 'Above Navigation'
+regions[navigation]      = 'Navigation'
+regions[front_page_hero] = 'Front Page Hero'
+regions[header]          = 'Top Bar'
+regions[highlighted]     = 'Highlighted'
+regions[help]            = 'Help'
+regions[content]         = 'Content'
+regions[sidebar_first]   = 'Primary'
+regions[sidebar_second]  = 'Secondary'
+regions[footer]          = 'Footer'
+regions[page_top]        = 'Page top'
+regions[page_bottom]     = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = js/menu-toggle.js
+scripts[] = js/twitter-timeline-adjust.js

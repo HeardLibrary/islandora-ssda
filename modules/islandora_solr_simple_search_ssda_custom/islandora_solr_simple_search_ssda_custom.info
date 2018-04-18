@@ -1,0 +1,9 @@
+name = Islandora Solr Simple Search SSDA Custom
+description = This module renders a copy of the Islandora Solr simple search form w/o using a block, providing additional flexibility.
+package = Islandora Solr
+core = "7.x"
+php = 5.5
+version = 7.x-0.1
+
+dependencies[] = islandora_solr
+

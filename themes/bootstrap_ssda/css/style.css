@@ -1,0 +1,563 @@
+/**
+ * Place your custom styles here.
+ */
+
+/*
+##################################
+##################################
+#####                        #####
+#####     GENERAL STYLES     #####
+#####                        #####
+##################################
+##################################
+*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Domine', serif;
+  margin-top: 0;
+}
+
+/*
+******************
+** Search Forms **
+******************
+*/
+
+.search-form {
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+}
+
+.search-form .form-group {
+  width: 100%;
+  margin: 0;
+}
+
+.search-form .form-control {
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.search-form .form-submit {
+  top: 0;
+  border: 0;
+}
+
+/*
+#####################################
+#####################################
+#####                           #####
+#####     NAVIGATION REGION     #####
+#####                           #####
+#####################################
+#####################################
+*/
+
+.container > .navbar-header, 
+.container > .navbar-collapse {
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .container .navbar-collapse {
+    padding: 10px 0;
+  }
+}
+
+/* Where logo resides */
+.navbar.fluid-container {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  background: url('https://dev-essss.library.vanderbilt.edu/sites/dev-essss.library.vanderbilt.edu/files/SSDA_bkgrdtexture.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar-header {
+  width: 100%;
+  position: relative; /* Site search is positioned relative to this element. */
+}
+
+/* Where links reside */
+.main-navbar {
+  background-color: rgb(47, 50, 95);
+}
+
+.navbar-collapse {
+  padding: 0px;
+}
+
+.navbar-nav {
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  /* Easy vertical centering of mobile search and menu buttons. */
+  .navbar-header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+
+  .navbar.fluid-container {
+    background: rgb(47, 50, 95); /* Override parchment background on mobile. */
+  }
+}
+
+/*
+**********************
+** Nav Search Forms **
+********************** 
+*/
+
+.navbar-header .search-form {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  margin-top: 23px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-header .search-form .form-wrapper {
+  display: flex;
+  margin: 0;
+}
+
+.navbar-header .search-form .form-control {
+  border: 0;
+}
+
+.navbar-header .search-form .form-submit {
+  background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-header .search-form {
+    position: static;
+    width: 100%;
+    margin: 0 0 0 10px;
+  }
+  
+  .navbar-header .search-form .form-control {
+    height: 44px;
+  }
+}
+
+/*
+**********
+** Logo **
+**********
+*/
+
+/* Fix for Islandora pages */
+.navbar-header a.logo {
+  width: auto;
+  height: auto;
+  margin: 0;
+  background: transparent;
+}
+
+.navbar-header .logo.visible-xs {
+  width: 250px;
+  margin: 15px auto;
+}
+
+.navbar-header .logo.visible-xs img {
+  width: 90%;
+}
+
+.logo.hidden-xs img {
+  width: 325px;
+}
+
+/*
+**********************
+** Hamburger button **
+**********************
+*/
+
+.navbar-toggle {
+  border: 0;
+  margin: 0;
+  border-radius: 2px;
+  height: 44px;
+  width: 44px;
+}
+
+.navbar-toggle .icon-bar {
+  height: 3px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: rgb(250, 242, 219);
+}
+
+/*
+**************************************
+** Search and cancel mobile buttons **
+**************************************
+*/
+
+.mobile-nav-btn .btn-primary {
+  border-radius: 2px;
+  height: 44px;
+  width: 44px;
+  background-color: transparent;
+  border: 0;
+}
+
+.mobile-nav-btn .glyphicon-search {
+  font-size: 1.8rem;
+}
+
+.mobile-nav-btn .btn-primary:hover,
+.mobile-nav-btn .btn-primary:focus {
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+.navbar-default .mobile-nav-btn:hover .glyphicon-search,
+.navbar-default .mobile-nav-btn:focus .glyphicon-search {
+  color: rgb(250, 242, 219);
+}
+
+/*
+****************
+** Menu links **
+****************
+*/
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li > a {
+  color: rgb(255, 255, 255);
+  padding: 10px 12px;
+  background-color: transparent;
+  transition: background-color 0.1s, color 0.1s, ease-out;
+}
+
+#navbar.navbar-default ul > li > a:hover,
+#navbar.navbar-default ul > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.33);
+  color: rgb(250, 242, 219);
+}
+
+/*
+**************
+** Dropdown **
+**************
+*/
+
+.navbar-nav > li > .dropdown-menu,
+.navbar-nav .open .dropdown-menu {
+  min-width: 200px;
+  border: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: 0;
+  background-color: #202240;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li.active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a,
+.dropdown-menu > li.active > a,
+.dropdown-menu > li > a {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+}
+
+#navbar.navbar-default .dropdown-menu > li > a:hover,
+#navbar.navbar-default .dropdown-menu > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+/*
+##########################################
+##########################################
+#####                                #####
+#####     FRONT PAGE HERO REGION     #####
+#####                                #####
+##########################################
+##########################################
+*/
+
+.hero {
+  background-color: rgb(250, 242, 219);
+  position: relative;
+  z-index: 0;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+/*
+*****************************
+** Islandora simple search **
+*****************************
+*/
+
+.block-islandora-solr {
+  margin-bottom: 4.5rem;
+}
+
+.block-islandora-solr .block-title {
+  text-align: center;
+}
+
+#islandora-solr-simple-search-form {
+  border: 1px solid #ccc;
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  #islandora-solr-simple-search-form {
+    width: 100%;
+  }
+}
+
+#islandora-solr-simple-search-form .form-wrapper {
+  display: flex;
+  margin: 0;
+}
+
+#islandora-solr-simple-search-form .form-group {
+  margin-bottom: 0;
+}
+
+#islandora-solr-simple-search-form .form-control {
+  font-size: 2rem;
+  height: 44px;
+  border: 0;
+}
+
+#islandora-solr-simple-search-form .form-submit {
+  background-color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+
+/*
+***************************
+** Primary Regions Block **
+***************************
+*/
+
+.view-primary-collections .row:first-child {
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .view-primary-collections .row:first-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .view-primary-collections-container {
+    margin-bottom: 3rem;
+  }
+}
+
+.view-primary-collections h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.4rem; 
+  margin-top: -3.25rem;
+  margin-left: 1rem;
+  position: absolute;
+}
+
+.view-primary-collections a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(14, 14, 29, 0.66);
+}
+
+.view-primary-collections a:hover,
+.view-primary-collections a:focus {
+  text-decoration: none;
+}
+
+.view-primary-collections .field-content {
+  background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.33));
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.view-primary-collections .field-content img {
+  position: relative;
+  z-index: -1;
+  border-radius: 2px;
+}
+
+/*
+##################################
+##################################
+#####                        #####
+#####     CONTENT REGION     #####
+#####                        #####
+##################################
+##################################
+*/
+
+.main-container {
+  margin-top: 4.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .region-content {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.region-content .block-system {
+  margin-bottom: 3rem;
+}
+
+#map {
+  border: 0;
+  border-radius: 2px;
+}
+
+#twitter-timeline-container {
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.twitter-timeline {
+  margin-top: -1rem !important;
+}
+
+/*
+#################################
+#################################
+#####                       #####
+#####     FOOTER REGION     #####
+#####                       #####
+#################################
+#################################
+*/
+
+.footer {
+  padding: 0;
+  margin-top: 4.5rem;
+  border: 0;
+  background-color: rgb(47, 50, 95);
+}
+
+.footer .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #fff;
+  font-size: 90%;
+  text-align: center;
+}
+
+#block-block-3 {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*
+*******************
+** Funders Block **
+*******************
+*/
+
+.view-funders {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.view-funders .container {
+  padding-bottom: 0;
+}
+
+.view-funders .view-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.view-row > div {
+  width: 20%;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .view-row > div {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .view-row > div {
+    width: 50%;
+  }
+}
+
+.view-funders img {
+  width: 85%;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+
+
+/*
+*****************
+** Admin login **
+*****************
+*/
+
+.admin-login {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.admin-login .menu.secondary {
+  float: none;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem; 
+  text-transform: uppercase;
+}
+
+.admin-login .menu.secondary li {
+  float: left;
+}
+
+.admin-login .menu.secondary li  a {
+  padding: 0;
+  margin-right: 15px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.admin-login .menu.secondary li:last-child a {
+  margin-right: 0;
+}
+
+.admin-login .menu.secondary > li > a:hover, 
+.admin-login .menu.secondary > li > a:focus {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+}
